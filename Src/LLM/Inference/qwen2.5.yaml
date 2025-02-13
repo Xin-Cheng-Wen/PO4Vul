@@ -1,0 +1,4 @@
+model_name_or_path: saves/qwn2.5_vul/full/sft_6
+adapter_name_or_path: saves/qwn2.5_vul/lora/IPO_C3
+template: qwen
+temperature: 0.0
