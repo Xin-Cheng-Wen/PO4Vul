@@ -3,7 +3,7 @@
 <div align="center">
     <p>
     <h1>
-    RepoSPD
+    ReVD
     </h1>
     <img src="logo.jpg" alt="ReVD Logo" style="width: 200px; height: 200px;">
     </p>
