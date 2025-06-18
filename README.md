@@ -1,10 +1,9 @@
-# PO4Vul
+
+# Boosting Vulnerability Detection of LLMs via Curriculum Preference Optimization with Synthetic Reasoning Data
 
 <div align="center">
+    TL;DR We develop a novel two-stage framework ReVD using synthetic reasoning data, which can turn open-source LLMs into strong vulnerability detectors by aligning their coding knowledge with vulnerability semantics, patterns, and types.
     <p>
-    <h1>
-    ReVD
-    </h1>
     <img src="logo.jpg" alt="ReVD Logo" style="width: 200px; height: 200px;">
     </p>
     <p>
@@ -16,9 +15,9 @@
 </div>
 
 ### In training and inference phase:
-We provide config about fine-tuning and IPO for LLMs in `src\LLM`.
+Please refer to `src\LLM` for configs used to fine-tune LLMs with T-SFT and COPO.
 
-Make sure to execute these commands in the `LLaMA-Factory` (V0.9.2) directory.
+Make sure to execute the following commands in the `LLaMA-Factory` (V0.9.2) directory.
 
 #### SFT
 
@@ -34,10 +33,22 @@ llamafactory-cli train Src/LLM/IPO/qwen2.5_lora_ipo_C.yaml
 ```
 
 ### In BVD phase:
-We provide src for Qwen2.5-Coder-32B in `src\GenData\sft_gen.py`.
+We provide the source code for training Qwen2.5-Coder-32B in `src\GenData\sft_gen.py`.
 
 ### In COPO phase:
-We provide src for Qwen2.5-Coder-32B in `src\GenData\ins_c_step_{C}.py` and `src\GenData\task{C}.py`. "C" denotes the step of generation.
+We provide the source code for training Qwen2.5-Coder-32B in `src\GenData\ins_c_step_{C}.py` and `src\GenData\task{C}.py`. "C" denotes the step of generation.
 
 ### Eval phase:
-We provide src for Vulnerability Detection in `Eval`.
+`Eval` contains the script used to evaluate ReVD's accuracy of vulnerability detection in testing data.
+
+
+## Citation
+
+```bibtex
+@article{wen2025boosting,
+  title={Boosting Vulnerability Detection of LLMs via Curriculum Preference Optimization with Synthetic Reasoning Data},
+  author={Wen, Xin-Cheng and Yang, Yijun and Gao, Cuiyun and Xiao, Yang and Ye, Deheng},
+  journal={arXiv preprint arXiv:2506.07390},
+  year={2025}
+}
+```
